@@ -1,0 +1,232 @@
+/* Global
+--------------*/
+* {
+  /* border: 1px dashed red; */
+}
+
+/* Reset */
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+  margin: 0;
+  background-color: #1e1c28;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  height: 35px;
+  border: 0;
+  background-color: #04bc0a;
+  color: #fff;
+}
+
+/* maybe use this later?
+article,
+aside,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block;
+}
+*/
+
+/* Header and Nav and Footer
+---------------------*/
+
+/* header */
+
+header {
+  height: 148px;
+  background-color: #34333d;
+}
+
+nav {
+  display: inline-block;
+  float: right;
+  margin-top: 50px;
+}
+
+.header-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+#site-title {
+  display: inline-block;
+}
+
+#logo {
+  margin-top: 40px;
+}
+
+#header-donate {
+  height: 48px;
+  width: 163px;
+}
+
+/* footer */
+
+#footer-wrap {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* Main content area
+-----------------------*/
+
+main header {
+  margin-bottom: 81px;
+  background-color: #1e1c28;
+}
+
+main h1 {
+  font-size: 72px;
+  font-family: 'Teko', sans-serif;
+}
+
+main p{
+
+}
+
+#main-wrap {
+  max-width: 1040px;
+  margin: 50px auto;
+}
+
+/* date picker boxes and calculation */
+
+.date-box {
+  display: inline-block;
+  width: 420px;
+  padding: 36px;
+  background-color: #34333d;
+}
+
+#date-box-final {
+  float: right;
+}
+
+.date-box button, input {
+  height: 35px;
+  width: 31%;
+  margin: 10px 2px;
+  border: none;
+}
+
+input {
+  background-color: #3e3d46;
+  color: #aaa;
+}
+
+select {
+      height: 35px;
+      width: 31%;
+      border: none;
+      background-color: #3e3d46;
+      color: #fff;
+
+      /* reset */
+      margin: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+}
+
+/* --- Select carrot option 1
+
+select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #fff 50%),
+    linear-gradient(135deg, #fff 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+----*/
+
+select:focus {
+  border: 1px solid #04bc0a;
+}
+
+#currency0::after {
+  content: "ffffff";
+  padding: 2px;
+}
+
+#amount0, #amount1 {
+  width: 65%;
+}
+
+#results {
+  width: 700px;
+  margin-top: 84px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+button#go {
+/* needs rounded edges */
+  height: 48px;
+  width: 176px;
+}
+
+#explanation {
+  font-size: 48px;
+  font-family: 'Teko', sans-serif;
+}
+
+/* Donation */
+
+#donate {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #34333d;
+}
+
+#donate-twitter {
+  background-color: #1da1f2;
+}
+
+/* --- Media query at ~992px ------*/
