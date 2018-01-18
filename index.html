@@ -13,6 +13,9 @@
 		<!-- Roboto -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+		<!-- Chevron and other characters -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<!-- Styles -->
 		<link href="styles/style.css" rel="stylesheet">
 	</head>
@@ -54,11 +57,15 @@
 							<span pseudo="-webkit-datetime-edit"></span>
 						</input><button id="now0">Today</button><br/>
 						<p>Bitcoin or Dollars</p>
-						<select id="currency0" name="currency0">
+							<div class="select-wrapper">
+								<select id="currency0" name="currency0">
 									<option value="xbt">BitCoin</option>
 									<option value="usd">US Dollar</option>
 								</select>
-						<input id="amount0" name="amount0" type="number" step="1.00" value="0.00" />
+								<i style="font-size:24px" class="fa">&#xf107;</i>
+							</div><!-- End select-wrapper div -->
+							<input id="amount0" name="amount0" type="number" step="1.00" value="0.00" />
+
 					</div>
 
 			<!-- Original HTML
@@ -88,10 +95,13 @@
 						<button>Earliest</button>
 						<input id="date1" name="date1" type="date" /><button id="now1">Today</button><br/>
 						<p>Bitcoin or Dollars</p>
-						<select id="currency1" name="currency1" >
-									<option value="xbt">BitCoin</option>
-									<option value="usd">US Dollar</option>
+						<div class="select-wrapper">
+							<select id="currency1" name="currency1" >
+								<option value="xbt">BitCoin</option>
+								<option value="usd">US Dollar</option>
 							</select>
+							<i style="font-size:24px" class="fa">&#xf107;</i>
+						</div>
 						<input id="amount1" name="amount1" type="number" step="1.00" value="0.00"/>
 					</div>
 

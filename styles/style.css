@@ -147,20 +147,41 @@ input {
   color: #aaa;
 }
 
-select {
-      height: 35px;
-      width: 31%;
-      border: none;
-      background-color: #3e3d46;
-      color: #fff;
+.select-wrapper {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  width: 31%;
+  border: none;
+  background-color: #3e3d46;
+}
 
-      /* reset */
-      margin: 0;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-appearance: none;
-      -moz-appearance: none;
+.select-wrapper select + i {
+  position: absolute;
+  top:15%;
+  right: 10px;
+}
+
+select {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  color: #fff;
+
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 /* --- Select carrot option 1
@@ -186,13 +207,10 @@ select:focus {
   border: 1px solid #04bc0a;
 }
 
-#currency0::after {
-  content: "ffffff";
-  padding: 2px;
-}
-
 #amount0, #amount1 {
-  width: 65%;
+  width: 63%;
+  margin-left: 5px;
+  padding: 0;
 }
 
 #results {
