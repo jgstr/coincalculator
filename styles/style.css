@@ -9,7 +9,8 @@
 h1,
 h2,
 h3,
-p {
+p,
+button {
   margin: 0;
 	padding: 0;
 	border: 0;
@@ -46,8 +47,13 @@ a {
 button {
   height: 35px;
   border: 0;
+  border-radius: 3px;
   background-color: #04bc0a;
   color: #fff;
+}
+
+input, select {
+  border-radius: 3px;
 }
 
 /* maybe use this later?
@@ -92,17 +98,58 @@ nav {
   margin-top: 40px;
 }
 
+.header-social-btn {
+  height: 35px;
+  width: 35px;
+  padding-top: 2px;
+  border-radius: 50%;
+  background-color: #2e2e38;
+}
+
+.header-social-logo {
+  height: 40%;
+}
+
 #header-donate {
   height: 48px;
   width: 163px;
+  margin-left: 38px;
+  border-radius: 24px;
 }
 
 /* footer */
 
+footer {
+  height: 148px;
+  padding-top: 40px;
+  background-color: #34333d;
+}
 #footer-wrap {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
+  font-size: 12px;
+  color: #999999;
+}
+
+#footer-wrap a {
+  text-decoration: none;
+}
+
+#footer-wrap a:visited {
+  color: #999999;
+}
+
+.footer-social-links {
+  margin-top: 10px;
+}
+.footer-social-logo {
+  opacity: .4;
+}
+
+.footer-social-space {
+  display: inline-block;
+  width: 16px;
 }
 
 
@@ -124,7 +171,7 @@ main p{
 }
 
 #main-wrap {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 50px auto;
 }
 
@@ -132,9 +179,10 @@ main p{
 
 .date-box {
   display: inline-block;
-  height: 257px;
-  width: 480;
+  max-height: 259px;
+  max-width: 482px;
   padding: 36px;
+  border-radius: 20px;
   background-color: #34333d;
 }
 
@@ -150,6 +198,7 @@ main p{
 }
 
 .date-box input {
+  /* for some reason the alignment is off for these */
   height: 40px;
   width: 140px;
   margin: 0 16px;
@@ -207,18 +256,36 @@ select:focus {
   color: #bbbbbb;
 }
 
+.currency-select {
+  height: 40px;
+  width: 150px;
+}
+
 #amount0, #amount1 {
-  width: 63%;
-  margin-left: 5px;
+  height: 40px;
+  width: 242px;
+  /* margin-left: 5px; */
   padding: 0;
 }
 
 #results {
+  display: block;
+  clear: both;
+}
+
+#explanation {
+  display: block;
+  height: 116px;
+  padding-top: 84px;
+  text-align: center;
+}
+
+#calculate {
   width: 700px;
-  margin-top: 84px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 90px;
+  clear: both;
   text-align: center;
 }
 
@@ -236,15 +303,47 @@ button#go {
 /* Donation */
 
 #donate {
-  width: 500px;
+  height: 127px;
+  width: 645px;
   margin: 0 auto;
-  padding: 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border-radius: 20px;
   text-align: center;
   background-color: #34333d;
 }
 
+#donate p {
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+#donate-btn {
+  height: 48px;
+  width: 163px;
+  margin-left: 95px;
+  border-radius: 24px;
+  font-size: 19px;
+  font-weight: bold;
+}
+
 #donate-twitter {
+  height: 48px;
+  width: 217px;
+  margin-right: 95px;
+  margin-left: 70px;
+  border-radius: 3px;
+  font-size: 19px;
+  font-weight: bold;
   background-color: #1da1f2;
+}
+
+#twitter-logo {
+  /* bug: for some reason the height is affecting the elements after */
+  position: relative;
+  top: 10%;
+  margin-right: 10px;
+  height: 50%;
 }
 
 /* --- Media query at ~992px ------*/

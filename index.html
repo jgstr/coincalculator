@@ -23,14 +23,19 @@
 		<!--Bitcoin Header -->
 		<header role="banner" alt="Bitcoin Calculator">
 			<div class="header-wrap">
-				<img id="logo" src='/img/Logo.svg'>
+				<img id="logo" src='/img/Logo.svg' alt="The Bitcoin Calculator">
 				<!-- <h1 id="site-title">Bitcoin Calculator</h1> -->
 
 				<!-- Right Social Links and Donate -->
 				<nav id="top-nav" role="navigation">
-						<img src=#>
-						<img src=#>
-						<button id="header-donate">Donate</button>
+						<a href="#">
+							<button class="header-social-btn" type="button" name="button">
+								<img class="header-social-logo" src="/img/facebook-logo.svg" alt="FB" /></a></button>
+						<a href="#">
+							<button class="header-social-btn" type="button" name="button">
+								<img class="header-social-logo" src="/img/twitter-logo.svg" alt="TW" /></a></button>
+						<a href="#">
+								<button id="header-donate">Donate</button></a>
 				</nav>
 			</div>
 		</header>
@@ -51,14 +56,14 @@
 <!-- Pick initial date -->
 				<form>
 					<div id="date-box-initial" class="date-box">
-						<h2>Pick a date.</h2><br/>
+						<h2>Pick a date.</h2>
 						<button>Earliest</button>
 						<input id="date0" name="date0" type="date">
 							<span pseudo="-webkit-datetime-edit"></span>
-						</input><button id="now0">Today</button><br/>
+						</input><button id="now0">Today</button>
 						<p><span class="currency-title">Bitcoin or Dollars</span></p>
 							<div class="select-wrapper">
-								<select id="currency0" name="currency0">
+								<select id="currency0" class="currency-select" name="currency0">
 									<option value="xbt">Bitcoin (BTC)</option>
 									<option value="usd">US Dollar (USD)</option>
 								</select>
@@ -68,76 +73,39 @@
 
 					</div>
 
-			<!-- Original HTML
-
-		<form>
-			<table cellspacing="20">
-				<tr>
-					<td>
-						<h2>Pick a date</h2><br/>
-						<button>Earliest</button>
-						<input id="date0" name="date0" type="date" >
-							<div pseudo="-webkit-datetime-edit"></div>
-						</input>
-						or <button id="now0">Today</button><br/>
-						<select id="currency0" name="currency0">
-									<option value="xbt">BitCoin</option>
-									<option value="usd">US Dollar</option>
-								</select>
-						<input id="amount0" name="amount0" type="number" step="1.00" value="0.00" />
-					</td>
-
-				-->
-
 <!-- Pick final date -->
 					<div id="date-box-final" class="date-box">
-						<h2>Pick another date.</h2><br/>
+						<h2>Pick another date.</h2>
 						<button>Earliest</button>
-						<input id="date1" name="date1" type="date" /><button id="now1">Today</button><br/>
+						<input id="date1" name="date1" type="date" /><button id="now1">Today</button>
 						<p><span class="currency-title">Bitcoin or Dollars</span</p>
 						<div class="select-wrapper">
-							<select id="currency1" name="currency1" >
-								<option value="xbt">BitCoin</option>
-								<option value="usd">US Dollar</option>
+							<select id="currency1" class="currency-select" name="currency1" >
+								<option value="xbt">Bitcoin (BTC)</option>
+								<option value="usd">US Dollar (USD)</option>
 							</select>
 							<i class="fa">&#xf107;</i>
 						</div>
 						<input id="amount1" name="amount1" type="number" step="1.00" value="0.00"/>
 					</div>
 
-
-<!-- Original final date HTML
-<td>
-	<h2>Pick another date</h2><br/>
-	<button>Earliest</button>
-	<input id="date1" name="date1" type="date" />
-	or <button id="now1">Today</button><br/>
-	<select id="currency1" name="currency1" >
-				<option value="xbt">BitCoin</option>
-				<option value="usd">US Dollar</option>
-			</select>
-	<input id="amount1" name="amount1" type="number" step="1.00" value="0.00"/>
-</td>
-</tr>
-</table>
-
--->
-
 <!-- Results appear here -->
-			<div id="spinner">PROCESSING...</div>
-			<div id="explanation"></div>
+					<div id="results">
+						<div id="spinner">PROCESSING...</div>
+						<div id="explanation"></div>
+					</div>
 		</form>
 
 		<!-- Calculate Button -->
-		<div id="results">
+		<div id="calculate">
 					<button id="go">CALCULATE</button>
 		</div>
 <!-- Donation area -->
 		<aside role="complementary">
 			<div id="donate">
 				<p>Like what we did here? Please donate and/or tell the world.</p>
-				<button>Donate</button>
-				<button id="donate-twitter">Tell the World</button>
+				<button id="donate-btn">DONATE</button>
+				<button id="donate-twitter"><img id="twitter-logo" src="/img/twitter-logo.svg" alt="Twitter" />Tell the World</button>
 			</div>
 		</aside>
 		</section>
@@ -150,9 +118,9 @@
 		<div id="footer-wrap">
 		<p>Information about exchange rates heres.</p><br>
 		<p>&copy 2018 Bitcoin Calculator - <a href=#>Terms</a></p>
-		<p>
-			<a href=#><img src=# alt="Social Link 1" /></a> <a href=#><img src=# alt="Social Link 2" /></a>
-		</p>
+		<div class="footer-social-links">
+			<a href=#><img class="footer-social-logo" src="/img/facebook-logo.svg" alt="Facebook Link" /></a><span class="footer-social-space"></span><a href=#><img class="footer-social-logo" src="/img/twitter-logo.svg" alt="Twitter" /></a>
+		</div>
 	</div> <!-- End #footer-wrap -->
 	</footer>
 
