@@ -35,6 +35,7 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 20px;
   font-size: 20px;
   font-family: 'Roboto';
   font-weight: bold;
@@ -101,6 +102,8 @@ nav {
 .header-social-btn {
   height: 35px;
   width: 35px;
+  float: left;
+  margin-top: 7px;
   padding-top: 2px;
   border-radius: 50%;
   background-color: #2e2e38;
@@ -113,8 +116,13 @@ nav {
 #header-donate {
   height: 48px;
   width: 163px;
-  margin-left: 38px;
   border-radius: 24px;
+  font-weight: bold;
+}
+
+#seperate-social-donate {
+  display: inline-block;
+  width: 38px;
 }
 
 /* footer */
@@ -177,17 +185,26 @@ main p{
 
 /* date picker boxes and calculation */
 
+#boxes-wrapper {
+  max-width: 1025px;
+  margin: 0 auto;
+}
+
 .date-box {
   display: inline-block;
   max-height: 259px;
   max-width: 482px;
-  padding: 36px;
+  padding: 36px 27px 36px 36px;
   border-radius: 20px;
   background-color: #34333d;
 }
 
 #date-box-final {
   float: right;
+}
+
+.date-buttons {
+  margin-bottom: 15px;
 }
 
 .date-box button {
@@ -198,7 +215,8 @@ main p{
 }
 
 .date-box input {
-  /* for some reason the alignment is off for these */
+  position: relative;
+  bottom: 2px;
   height: 40px;
   width: 140px;
   margin: 0 16px;
@@ -210,9 +228,10 @@ main p{
 .select-wrapper {
   display: inline-block;
   position: relative;
-  height: 35px;
-  width: 31%;
+  height: 40px;
+  width: 150px;
   border: none;
+  border-radius: 3px;
   background-color: #3e3d46;
 }
 
@@ -231,10 +250,7 @@ select {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding-left: 5px;
   border: none;
-  outline: none;
-  appearance: none;
   background-color: transparent;
   color: #fff;
 
@@ -252,13 +268,14 @@ select:focus {
 }
 
 .currency-title {
+  display: inline-block;
+  margin-bottom: 7px;
   font-size: 12px;
   color: #bbbbbb;
 }
 
 .currency-select {
-  height: 40px;
-  width: 150px;
+  font-size: 14px;
 }
 
 #amount0, #amount1 {
@@ -290,9 +307,10 @@ select:focus {
 }
 
 button#go {
-/* needs rounded edges */
   height: 48px;
   width: 176px;
+  border-radius: 24px;
+  font-weight: bold;
 }
 
 #explanation {

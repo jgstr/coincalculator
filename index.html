@@ -28,14 +28,15 @@
 
 				<!-- Right Social Links and Donate -->
 				<nav id="top-nav" role="navigation">
-						<a href="#">
+						<a href="http://www.startpage.com">
 							<button class="header-social-btn" type="button" name="button">
-								<img class="header-social-logo" src="/img/facebook-logo.svg" alt="FB" /></a></button>
-						<a href="#">
+								<img class="header-social-logo" src="/img/facebook-logo.svg" alt="FB" /></button></a>
+						<a href="http://www.coinmarketcap.com">
 							<button class="header-social-btn" type="button" name="button">
-								<img class="header-social-logo" src="/img/twitter-logo.svg" alt="TW" /></a></button>
-						<a href="#">
-								<button id="header-donate">Donate</button></a>
+								<img class="header-social-logo" src="/img/twitter-logo.svg" alt="TW" /></button></a>
+						<span id="seperate-social-donate"></span>
+						<a href="http://www.aarongoold.com">
+								<button id="header-donate">DONATE</button></a>
 				</nav>
 			</div>
 		</header>
@@ -55,40 +56,45 @@
 
 <!-- Pick initial date -->
 				<form>
-					<div id="date-box-initial" class="date-box">
-						<h2>Pick a date.</h2>
-						<button>Earliest</button>
-						<input id="date0" name="date0" type="date">
-							<span pseudo="-webkit-datetime-edit"></span>
-						</input><button id="now0">Today</button>
-						<p><span class="currency-title">Bitcoin or Dollars</span></p>
+					<div id="boxes-wrapper">
+						<div id="date-box-initial" class="date-box">
+							<h2>Pick a date.</h2>
+							<div class="date-buttons">
+								<button>Earliest</button>
+								<input id="date0" name="date0" type="date">
+									<span pseudo="-webkit-datetime-edit"></span>
+								</input><button id="now0">Today</button>
+							</div>
+							<p><span class="currency-title">Bitcoin or Dollars</span></p>
+								<div class="select-wrapper">
+									<select id="currency0" class="currency-select" name="currency0">
+										<option value="xbt">&nbsp Bitcoin (BTC)</option>
+										<option value="usd">&nbsp US Dollar (USD)</option>
+									</select>
+									<i class="fa">&#xf107;</i>
+								</div><!-- End select-wrapper div -->
+								<input id="amount0" name="amount0" type="number" step="1.00" value="0.00" />
+
+						</div>
+
+	<!-- Pick final date -->
+						<div id="date-box-final" class="date-box">
+							<h2>Pick another date.</h2>
+								<div class="date-buttons">
+									<button>Earliest</button>
+									<input id="date1" name="date1" type="date" /><button id="now1">Today</button>
+								</div>
+							<p><span class="currency-title">Bitcoin or Dollars</span</p>
 							<div class="select-wrapper">
-								<select id="currency0" class="currency-select" name="currency0">
-									<option value="xbt">Bitcoin (BTC)</option>
-									<option value="usd">US Dollar (USD)</option>
+								<select id="currency1" class="currency-select" name="currency1" >
+									<option value="xbt">&nbsp Bitcoin (BTC)</option>
+									<option value="usd">&nbsp US Dollar (USD)</option>
 								</select>
 								<i class="fa">&#xf107;</i>
-							</div><!-- End select-wrapper div -->
-							<input id="amount0" name="amount0" type="number" step="1.00" value="0.00" />
-
-					</div>
-
-<!-- Pick final date -->
-					<div id="date-box-final" class="date-box">
-						<h2>Pick another date.</h2>
-						<button>Earliest</button>
-						<input id="date1" name="date1" type="date" /><button id="now1">Today</button>
-						<p><span class="currency-title">Bitcoin or Dollars</span</p>
-						<div class="select-wrapper">
-							<select id="currency1" class="currency-select" name="currency1" >
-								<option value="xbt">Bitcoin (BTC)</option>
-								<option value="usd">US Dollar (USD)</option>
-							</select>
-							<i class="fa">&#xf107;</i>
+							</div>
+							<input id="amount1" name="amount1" type="number" step="1.00" value="0.00"/>
 						</div>
-						<input id="amount1" name="amount1" type="number" step="1.00" value="0.00"/>
-					</div>
-
+					</div> <!-- end boxes wrapper -->
 <!-- Results appear here -->
 					<div id="results">
 						<div id="spinner">PROCESSING...</div>
