@@ -87,7 +87,8 @@ nav {
 }
 
 .header-wrap {
-  max-width: 1300px;
+  /* max-width: 1300px; */
+  max-width: 92%;
   margin: 0 auto;
 }
 
@@ -133,7 +134,7 @@ footer {
   background-color: #34333d;
 }
 #footer-wrap {
-  max-width: 500px;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center;
   font-size: 12px;
@@ -178,15 +179,23 @@ main p{
 
 }
 
-#main-wrap {
-  max-width: 1100px;
-  margin: 50px auto;
+#main-header-wrap {
+  /* display: inline-block; */
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+#main-header-wrap h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  line-height: 90%;
 }
 
 /* date picker boxes and calculation */
 
-#boxes-wrapper {
-  max-width: 1025px;
+#boxes-wrapper-inner {
+  position: relative;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -194,13 +203,19 @@ main p{
   display: inline-block;
   max-height: 259px;
   max-width: 482px;
+  margin: 10px;
   padding: 36px 27px 36px 36px;
   border-radius: 20px;
   background-color: #34333d;
 }
 
+#date-box-initial {
+  /* margin-right: 15px; */
+}
+
 #date-box-final {
-  float: right;
+  position: relative;
+  right: 0px;
 }
 
 .date-buttons {
@@ -323,7 +338,7 @@ button#go {
 #donate {
   height: 127px;
   width: 645px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   padding-top: 26px;
   padding-bottom: 26px;
   border-radius: 20px;
@@ -364,9 +379,34 @@ button#go {
   height: 50%;
 }
 
-/* --- Media query at ~992px ------*/
+/* --- Media queries ------*/
 
-@media (max-width: 992px) {
+/* --- Tablet ---*/
 
+@media (max-width: 1030px) {
+
+  .date-box {
+    display: block;
+    max-width: 440px;
+    margin: 0 auto 20px;
+  }
+
+}
+
+/* ------ Phones, small tablets --- */
+
+@media (max-width: 857px) {
+
+/* --- Header --- */
+
+  #logo {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  nav {
+    display: none;
+  }
 
 }
