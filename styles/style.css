@@ -176,7 +176,8 @@ main h1 {
 }
 
 main p{
-
+  display: block;
+  max-width: 600px;
 }
 
 #main-header-wrap {
@@ -313,7 +314,7 @@ select:focus {
 }
 
 #calculate {
-  width: 700px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 90px;
@@ -336,8 +337,8 @@ button#go {
 /* Donation */
 
 #donate {
-  height: 127px;
-  width: 645px;
+  min-height: 127px;
+  max-width: 645px;
   margin: 0 auto 40px;
   padding-top: 26px;
   padding-bottom: 26px;
@@ -399,14 +400,60 @@ button#go {
 
 /* --- Header --- */
 
+  header {
+    height: 125px;
+  }
+
   #logo {
-    display: inline-block;
-    margin: 0 auto;
-    margin-top: 10px;
+    position: relative;
+    margin: 25px 10px 10px 17px;
+    width: 90%;
   }
 
   nav {
     display: none;
+  }
+
+  /* --- Donate --- */
+
+  #donate p {
+    margin-bottom: 20px;
+    padding: 0 40px 0;
+  }
+  #donate-btn {
+    display: block;
+    height: 48px;
+    width: 163px;
+    margin: 0 auto 15px;
+    border-radius: 24px;
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  #donate-twitter {
+    display: block;
+    height: 48px;
+    max-width: 163px;
+    margin: 0 auto;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #1da1f2;
+  }
+
+  #twitter-logo {
+    /* bug: for some reason the height is affecting the elements after */
+    position: relative;
+    top: 6%;
+    margin-right: 10px;
+    height: 40%;
+  }
+  /* --- Results --- */
+
+
+  #explanation {
+    font-size: 30px;
+    padding-top: 20px;
   }
 
 }
