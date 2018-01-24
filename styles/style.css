@@ -181,7 +181,6 @@ main p{
 }
 
 #main-header-wrap {
-  /* display: inline-block; */
   max-width: 75%;
   margin: 0 auto;
 }
@@ -424,6 +423,10 @@ button#go {
 
   /* --- Main section header --- */
 
+  main header {
+    display: inline-block;
+  }
+
   #main-header-wrap h1 {
     display: inline-block;
   }
@@ -447,6 +450,15 @@ button#go {
     display: block;
     width: 100%;
     margin-left: 0px;
+  }
+
+  .select-wrapper {
+    width: 100%;
+  }
+
+  #amount0, #amount1 {
+    width: 100%;
+    margin: 15px 0 0 0;
   }
 
 
