@@ -227,15 +227,16 @@ section {
 }
 
 .date-box button {
+  position: relative;
   height: 40px;
   width: 118px;
+  top: 3px;
   margin: 0;
   border: none;
 }
 
 .date-box input {
-  position: relative;
-  bottom: 2px;
+  /* position: relative;  possibly delete */
   height: 40px;
   width: 140px;
   margin: 0 16px;
@@ -286,7 +287,7 @@ select {
   -moz-appearance: none;
 }
 
-select:focus {
+select:focus, #amount0:focus, #amount2:focus {
   border: 1px solid #04bc0a;
 }
 
@@ -303,10 +304,21 @@ select:focus {
 
 #amount0, #amount1 {
   height: 40px;
-  width: 242px;
+  width: 230px;
   /* margin-left: 5px; */
-  padding: 0;
+  padding: 0 0 0 15px;
+  font-size: 1em;
 }
+
+#amount0, #amount1 {
+  -moz-appearance:textfield;
+}
+/*
+#amount0::-webkit-outer-spin-button,
+#amount0::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
 
 #results {
   display: block;
@@ -463,8 +475,13 @@ button#go {
   }
 
   #amount0, #amount1 {
-    width: 100%;
+    width: 94.5%;
     margin: 15px 0 0 0;
+  }
+
+  #results p {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
 
