@@ -21,7 +21,7 @@ var calculate = function(){
   if( rate[0] == 0 || rate[1] == 0 ||
     (amount[0] == 0 &&  amount[1] == 0) ){
 
-      english = 'Please pick 2 dates and at least one amonunt.';
+      english = 'Please pick two dates and at least one amount.';
 
     }else{
 
@@ -112,7 +112,7 @@ var calculate = function(){
 
     }//if rate
 
-    $('#explanation').html(english);
+    $('#explanation').html('<p>' + english + '</p>');
 
   }//calculate
 
