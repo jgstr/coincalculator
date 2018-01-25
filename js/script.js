@@ -1,24 +1,22 @@
 var dom = 0;
 var rate = [0,0];
-var earliest_date = 'Jul 18 2010';
+var earliest_date = '2010-07-18';
+var earliest_date_english = 'Jul 18 2010'
 var earliest_date_parsed = 1279411200000;//Date.parse(earliest_date)
 var usd_rd = 100;
 var xbt_rd = 10000;
 
 
 var calculate = function(){
-  console.log('dom',dom);
-  console.log('rate',rate);
+  //console.log('dom',dom);
+  //console.log('rate',rate);
 
   var ratea, rateb, usda, usdb, xbt, english;
   var sub = Math.abs(dom-1);
   var amount = [parseFloat( $('[name="amount0"]').val() ),
   parseFloat( $('[name="amount1"]').val() )];
 
-  console.log('amount',amount);
-
-  console.log((rate[0] == 0 || rate[1] == 0) ? 'y1':'n1');
-  console.log((amount[0] <= 0 && amount[1] <=0) ? 'y2':'n2');
+  //console.log('amount',amount);
 
   if( rate[0] == 0 || rate[1] == 0 ||
     (amount[0] == 0 &&  amount[1] == 0) ){
@@ -119,15 +117,22 @@ var calculate = function(){
   }//calculate
 
   var get_rate = function(which, forced){
-    console.log('get_rate', which);
-
-
+    //console.log('get_rate', which);
 
     var now = new Date();
+    var premonth = now.getMonth()+1;
+    var now_string = now.getFullYear() + '-' +
+    (premonth < 10 ? '0':null) + (premonth) +'-'+
+    now.getDate();
+
+    if(forced == 'early'){
+      $('[name="date'+which+'"]').val(earliest_date);
+    }
+
     var raw_date = $('[name="date'+which+'"]').val();//string
     //var obj_date = $('[name="date'+which+'"]').prop('valueAsDate');//obj
     var parsed_date = Date.parse(raw_date);//number
-    var now_string = now.getFullYear() + '-' + (now.getMonth()+1) +'-'+now.getDate();
+
 
     if(forced == 'now' ||
     raw_date == now_string){
@@ -161,7 +166,7 @@ var calculate = function(){
       pretty_message('You have chosen a date in the future. Please donate to help us build the Neural Network functions we have planned to make that prediction.');
       return;
     }else if(parsed_date < earliest_date_parsed){
-      pretty_message('Please choose a date after '+earliest_date+'.');
+      pretty_message('Please choose a date after '+earliest_date_english+'.');
       return;
     }else{
       $('#spinner').show();
@@ -224,6 +229,16 @@ $(document).ready(function(){
   $('#date1').change(function(event){
     dom = 1;
     get_rate(1);
+  });
+  $('#early0').click(function(event){
+    event.preventDefault();
+    dom = 0;
+    get_rate(0,'early');
+  });
+  $('#early1').click(function(event){
+    event.preventDefault();
+    dom = 1;
+    get_rate(1,'early');
   });
   $('#now0').click(function(event){
     event.preventDefault();
