@@ -112,7 +112,7 @@ var calculate = function(){
 
     }//if rate
 
-    $('#explanation').html('<p>' + english + '</p>');
+    $('#explanation').html('<p>' + english + '</p>'); // Aaron added <p> tags
 
   }//calculate
 
