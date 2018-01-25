@@ -378,6 +378,7 @@ button#go {
 }
 
 #donate-btn {
+  position: relative;
   height: 48px;
   width: 163px;
   margin-left: 95px;
@@ -387,8 +388,9 @@ button#go {
 }
 
 #donate-twitter {
+  position: relative;
   height: 48px;
-  width: 217px;
+  width: 200px;
   margin-right: 95px;
   margin-left: 70px;
   border-radius: 3px;
@@ -400,9 +402,9 @@ button#go {
 #twitter-logo {
   /* bug: for some reason the height is affecting the elements after */
   position: relative;
-  top: 10%;
+  top: 15%;
   margin-right: 10px;
-  height: 50%;
+  height: 40%;
 }
 
 /* --- Media queries ------*/
