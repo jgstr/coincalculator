@@ -143,6 +143,7 @@ footer {
 
 #footer-wrap a {
   text-decoration: none;
+  color: #999999;
 }
 
 #footer-wrap a:visited {
@@ -165,6 +166,10 @@ footer {
 /* Main content area
 -----------------------*/
 
+main {
+  padding-left: 8px;
+  padding-right: 10px;
+}
 main header {
   margin-bottom: 81px;
   background-color: #1e1c28;
@@ -226,6 +231,17 @@ section {
   margin-bottom: 15px;
 }
 
+input[type="date" i], input[type="datetime-local" i], input[type="month" i], input[type="time" i], input[type="week" i] {
+    align-items: center;
+    display: -webkit-inline-flex;
+    font-family: inherit;
+    -webkit-padding-start: 1px;
+    cursor: default;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 10px;
+}
+
 .date-box button {
   position: relative;
   height: 40px;
@@ -239,7 +255,7 @@ section {
   /* position: relative;  possibly delete */
   height: 40px;
   width: 140px;
-  margin: 0 16px;
+  margin: 0 9px;
   border: none;
   background-color: #3e3d46;
   color: #aaa;
@@ -334,6 +350,8 @@ select:focus, #amount0:focus, #amount2:focus {
   display: block;
   height: 116px;
   padding-top: 84px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
 }
 
@@ -468,7 +486,7 @@ button#go {
 
   input[type="date"] {
     display: block;
-    width: 100%;
+    width: 98%;
     margin-left: 0px;
   }
 
