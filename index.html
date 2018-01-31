@@ -21,6 +21,7 @@
 </head>
 <body>
 	<!--Bitcoin Header -->
+
 	<header role="banner" alt="Bitcoin Calculator">
 		<div class="header-wrap">
 			<img id="logo" src='img/Logo.svg' alt="The Bitcoin Calculator">
@@ -35,8 +36,7 @@
 							<button class="header-social-btn" type="button" name="button">
 								<img class="header-social-logo" src="img/twitter-logo.svg" alt="TW" /></button></a>
 								<span id="seperate-social-donate"></span>
-								<a data-code="2b30a03995ec62f15bdc54e8428caa87" href="https://www.coinbase.com/checkouts/2b30a03995ec62f15bdc54e8428caa87">
-									<button id="header-donate">DONATE</button></a>
+								<a href="#" data-popup-open="popup"><button id="header-donate">DONATE</button></a>
 								</nav>
 							</div>
 						</header>
@@ -118,8 +118,7 @@
 
 											<!-- test coinbase donation creator // removed this class for styling: class="coinbase-button" -->
 
-											<a data-code="2b30a03995ec62f15bdc54e8428caa87" href="https://www.coinbase.com/checkouts/2b30a03995ec62f15bdc54e8428caa87"><button id="donate-btn">DONATE</button></a>
-											<script src="https://www.coinbase.com/assets/button.js" type="text/javascript"></script>
+											<a href="#" data-popup-open="popup"><button id="donate-btn">DONATE</button></a>
 											<button id="donate-twitter"><img id="twitter-logo" src="img/twitter-logo.svg" alt="Twitter" />Tell the World</button>
 										</div>
 									</aside>
@@ -136,6 +135,25 @@
 									<a href=#><img class="footer-social-logo" src="img/facebook-logo.svg" alt="Facebook Link" /></a><span class="footer-social-space"></span><a href=#><img class="footer-social-logo" src="img/twitter-logo.svg" alt="Twitter" /></a>
 								</div>
 							</div> <!-- End #footer-wrap -->
+
+							<!-- Donation Pop-up -->
+							<aside class="donate-popup">
+								<div class="popup" data-popup="popup">
+									<div class="popup-inner">
+										<h1>Donate now you beserker!</h1>
+											<div class="qr-code">
+												<p>
+													QR CODE HERE
+												</p>
+											</div>
+											<input type="text" name="btc-address" value="adjo320X0sT203suyoezz392082l02lyXps" readonly>
+										<div class="done-button">
+											<a href="#" data-popup-close="popup"><button>Done</button></a>
+										</div>
+									</div>
+								</div>
+							</aside>
+
 						</footer>
 
 						<!-- JS links -->
