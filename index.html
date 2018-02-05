@@ -4,9 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Coin Calculator</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-	<!-- Fonts -->
+	<!-- FONTS -->
 	<!-- Teko Regular -->
 	<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
 
@@ -16,8 +15,14 @@
 	<!-- Chevron and other characters -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!-- Styles -->
+	<!-- STYLES -->
 	<link href="styles/style.css" rel="stylesheet">
+
+	<!-- JQUERY -->
+	<!-- jquery cdn if needed -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+	<script src="js/jquery-1.9.1.min.js"></script>
+
 </head>
 <body>
 	<!--Bitcoin Header -->
@@ -61,11 +66,12 @@
 												<div id="date-box-initial" class="date-box">
 													<h2>Pick a date.</h2>
 													<div class="date-buttons">
-														<button id="early0" class="first-earliest-btn">Earliest</button>
+														<button id="early0" class="first-earliest-btn" type="button">Earliest</button>
 														<input id="date0" name="date0" type="date">
 														<span pseudo="-webkit-datetime-edit"></span>
-														<button class="second-earliest-btn">Earliest</button>
-													</input><button id="now0" class="now-btn">Today</button>
+														<button class="second-earliest-btn" type="button">Earliest</button>
+														<!-- A: this button above needs to be removed or somehow needs the jquery applied -->
+													</input><button id="now0" class="now-btn" type="button">Today</button>
 												</div>
 												<p><span class="currency-title">Bitcoin or Dollars</span></p>
 												<div class="select-wrapper">
@@ -83,10 +89,11 @@
 											<div id="date-box-final" class="date-box">
 												<h2>Pick another date.</h2>
 												<div class="date-buttons">
-													<button id="early1" class="first-earliest-btn">Earliest</button>
+													<button id="early1" class="first-earliest-btn" type="button">Earliest</button>
 													<input id="date1" name="date1" type="date" />
-													<button class="second-earliest-btn">Earliest</button>
-													<button id="now1" class="now-btn">Today</button>
+													<button class="second-earliest-btn" type="button">Earliest</button>
+													<!-- A: this button also needs to be removed or needs id="date1" applied somehow -->
+													<button id="now1" class="now-btn" type="button">Today</button>
 												</div>
 												<p><span class="currency-title">Bitcoin or Dollars</span</p>
 													<div class="select-wrapper">
