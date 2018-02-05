@@ -120,18 +120,29 @@ var calculate = function(){
     //console.log('get_rate', which);
 
     var now = new Date();
-    var premonth = now.getMonth()+1;
-    var now_string = now.getFullYear() + '-' +
-    (premonth < 10 ? '0':null) + (premonth) +'-'+
-    now.getDate();
+   var nowmonth = now.getMonth()+1;
+   var nowday = now.getDate();
+   var now_string = now.getFullYear() + '-' +
+           (nowmonth < 10 ? '0':'') + nowmonth +'-'+
+           (nowday < 10 ? '0':'') + nowday;
+   // console.log('now_string',now_string);
 
-    if(forced == 'early'){
-      $('[name="date'+which+'"]').val(earliest_date);
-    }
+   if(forced == 'early'){
+     $('[name="date'+which+'"]').val(earliest_date);
+   }
 
-    var raw_date = $('[name="date'+which+'"]').val();//string
-    //var obj_date = $('[name="date'+which+'"]').prop('valueAsDate');//obj
-    var parsed_date = Date.parse(raw_date);//number
+   var raw_date = $('[name="date'+which+'"]').val();//string
+   var parsed_date = new Date($('[name="date'+which+'"]').val());
+   parsed_date.setMinutes(parsed_date.getMinutes() + parsed_date.getTimezoneOffset());
+   var parsed_month = parsed_date.getMonth()+1;
+   var parsed_day = parsed_date.getDate();
+   var parsed_date_string = parsed_date.getFullYear() + '-' +
+           (parsed_month < 10 ? '0':'') + (parsed_month) +'-'+
+           (parsed_day < 10 ? '0':'') + (parsed_day);
+
+   // console.log('raw_date',raw_date);
+   // console.log('parsed_date',parsed_date);
+   // console.log('parsed_date_string',parsed_date_string);
 
 
     if(forced == 'now' ||
@@ -160,8 +171,9 @@ var calculate = function(){
 
   }else{
 
-    if(isNaN(parsed_date)){
-      return;
+    if(isNaN(parsed_date) ||
+      parsed_date == -1640966400000){
+      pretty_message("Please make sure your date is written in yyyy-mm-dd format. For example, today's date is would be: "+now_string);
     }else if(parsed_date > Date.now()){
       pretty_message('You have chosen a date in the future. Please donate to help us build the Neural Network functions we have planned to make that prediction.');
       return;
@@ -230,12 +242,12 @@ $(document).ready(function(){
     dom = 1;
     get_rate(1);
   });
-  $('#early0').click(function(event){
+  $('.early0').click(function(event){
     event.preventDefault();
     dom = 0;
     get_rate(0,'early');
   });
-  $('#early1').click(function(event){
+  $('.early1').click(function(event){
     event.preventDefault();
     dom = 1;
     get_rate(1,'early');

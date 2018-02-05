@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Coin Calculator</title>
+	<title>Coin Calculator v0_7</title>
 
 	<!-- FONTS -->
 	<!-- Teko Regular -->
@@ -18,10 +18,7 @@
 	<!-- STYLES -->
 	<link href="styles/style.css" rel="stylesheet">
 
-	<!-- JQUERY -->
-	<!-- jquery cdn if needed -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-	<script src="js/jquery-1.9.1.min.js"></script>
+
 
 </head>
 <body>
@@ -66,12 +63,10 @@
 												<div id="date-box-initial" class="date-box">
 													<h2>Pick a date.</h2>
 													<div class="date-buttons">
-														<button id="early0" class="first-earliest-btn" type="button">Earliest</button>
-														<input id="date0" name="date0" type="date">
-														<span pseudo="-webkit-datetime-edit"></span>
-														<button class="second-earliest-btn" type="button">Earliest</button>
-														<!-- A: this button above needs to be removed or somehow needs the jquery applied -->
-													</input><button id="now0" class="now-btn" type="button">Today</button>
+														<button class="early0 first-earliest-btn" type="button">Earliest</button>
+														<input id="date0" name="date0" type="date" />
+														<button class="early0 second-earliest-btn" type="button">Earliest</button>
+														<button id="now0" class="now-btn" type="button">Today</button>
 												</div>
 												<p><span class="currency-title">Bitcoin or Dollars</span></p>
 												<div class="select-wrapper">
@@ -89,10 +84,9 @@
 											<div id="date-box-final" class="date-box">
 												<h2>Pick another date.</h2>
 												<div class="date-buttons">
-													<button id="early1" class="first-earliest-btn" type="button">Earliest</button>
+													<button class="early1 first-earliest-btn" type="button">Earliest</button>
 													<input id="date1" name="date1" type="date" />
-													<button class="second-earliest-btn" type="button">Earliest</button>
-													<!-- A: this button also needs to be removed or needs id="date1" applied somehow -->
+													<button class="early1 second-earliest-btn" type="button">Earliest</button>
 													<button id="now1" class="now-btn" type="button">Today</button>
 												</div>
 												<p><span class="currency-title">Bitcoin or Dollars</span</p>
@@ -163,10 +157,14 @@
 
 						</footer>
 
-						<!-- JS links -->
+						<!-- JQUERY -->
+						<!-- jquery cdn if needed -->
+						<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+						<script src="js/jquery-1.9.1.min.js"></script>
+
+						<!-- JS -->
 						<script src="js/script.js"> </script>
-						<!-- <script src="scripts/jquery-1.9.1.min.js" ></script>
-						That's what Mark used in development. I have a CDN link above.
-					-->
+
+
 				</body>
 				</html>
