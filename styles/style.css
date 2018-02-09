@@ -42,6 +42,7 @@ h2 {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -217,7 +218,11 @@ text-align: center;
   font-weight: 700;
 }
 
-input[name="btc-address"] {
+.popup-inner a {
+  color: #04bc0a;
+}
+
+input[name="bch-address"] {
   height: 27px;
   min-width: 55%;
   padding-left: 10px;
@@ -491,6 +496,14 @@ button#go {
   height: 40%;
 }
 
+#bch-qr-01 {
+  max-width: 150px;
+}
+
+input[name='bch-address'] {
+  text-align: center;
+}
+
 /* --- Media queries ------*/
 
 /* --- Tablet ---*/
@@ -618,7 +631,7 @@ button#go {
       min-width: 80%;
     }
 
-    input[name="btc-address"] {
+    input[name="bch-address"] {
       min-width: 80%;
     }
 
