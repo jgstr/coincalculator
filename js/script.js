@@ -262,6 +262,9 @@ $(document).ready(function(){
     dom = 1;
     get_rate(1,'now');
   });
+
+  $('#currency0').val('usd');
+  $('#currency1').val('usd');
   // jQuery donation div goes here.
 
     //----- OPEN
