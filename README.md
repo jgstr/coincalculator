@@ -1,7 +1,7 @@
 # coincalculator
 HTML CSS Project for a Bitcoin Calculator
 
-I was hired to write the HTML, CSS and some JQuery for this Bitcoing Calculator. 
+I was hired to write the HTML, CSS and some JQuery for this Bitcoin Calculator. 
 
 This task required me to learn more about CSS, especially box model concepts, and HTML, namely structuring webpages for maximum readbility by both programmers and search engine crawlers.
 
